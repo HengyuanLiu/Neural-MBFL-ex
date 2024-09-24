@@ -1,4 +1,4 @@
-# Neural-MBFL
+# Neural-MBFL-ex
 This project is the experimental code for paper "Integrating Neural Mutation into Mutation-Based Fault Localization: A Hybrid Approach".
 Neural-MBFL is a novel fault localization approach based on neural mutation. 
 Additionally, we introduce NeuraIntegra-MBFL, an integrating
@@ -8,7 +8,7 @@ Below is an experimental framework diagram of our project:
 ![framework diagram](Neural-MBFL-ex.png)
 
 ## Requirements
-- `python 3.7.0`
+- Python 3.7.0
 - [*Defects4J v2.0.0*](https://github.com/rjust/defects4j/tree/v2.0.0)
 - [*μBERT*](https://github.com/rjust/defects4j/tree/v2.0.0)
     - [*CodeBERT*](https://github.com/microsoft/CodeBERT) dependencies:
