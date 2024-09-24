@@ -1,0 +1,20 @@
+{
+    "SoftwareTesting"       : "ProjectRootPath",
+
+    "FaultLocalization"     : "ProjectRootPath/FaultLocalization",
+        "MBFL"                  : "ProjectRootPath/FaultLocalization",
+            "MBFL_scripts"          : "ProjectRootPath/FaultLocalization/MBFL_Scripts",
+            "MBFL_Sus"              : "ProjectRootPath/FaultLocalization/Sus",
+            "MBFL_Rank"             : "ProjectRootPath/FaultLocalization/Rank",
+            "MBFL_Metric"           : "ProjectRootPath/FaultLocalization/Metric",
+
+    "Mutation"              : "ProjectRootPath/Mutation",
+        "NeuralMutation"        : "ProjectRootPath/Mutation/NeuralMutation",
+            "Mutation_mbert"        : "ProjectRootPath/Mutation/NeuralMutation/mbert",
+        "TraditionalMutation"   : "ProjectRootPath/Mutation/TraditionalMutation",
+            "Mutation_major"        : "ProjectRootPath/Mutation/TraditionalMutation/major",
+
+    "MutationAnalysis"      : "ProjectRootPath/MutationAnalysis",
+        "NeuralMutationResult"        : "ProjectRootPath/MutationAnalysis/NeuralMutation",
+        "TraditionalMutationResult"   : "ProjectRootPath/MutationAnalysis/TraditionalMutation"
+}

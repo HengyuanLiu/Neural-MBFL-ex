@@ -119,8 +119,6 @@ def getMutant(projectList, versionList, process_name):
 
                     with open(log_file_path, "w") as log_file:
                         json.dump({"time_cost": time_cost, "mutant_generation_info": mutant_generation_info, "mutate_percentage": mutate_percentage}, log_file)
-
-
 def startProcess(projectList, svid, evid, num_threads=10):
     total_versions = evid - svid + 1
     len1 = math.ceil(total_versions / num_threads)

@@ -12,15 +12,11 @@ SOFTWARE_TESTING_ROOT = Path(software_testing_root_env)
 MAJOR_FILE_ORIGIN = SOFTWARE_TESTING_ROOT / "Mutation/TraditionalMutation/major/MutantRepo/Defects4J/Mutant4FaultyFileOrigin"
 MAJOR_FILE = SOFTWARE_TESTING_ROOT / "Mutation/TraditionalMutation/major/MutantRepo/Defects4J/Mutant4FaultyFile"
 SRC_PATH = SOFTWARE_TESTING_ROOT / "DataSet/Defects4J/D4J/src_path"
-
-
 def get_versions(project):
     cmd = f"defects4j bids -p {project}"
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     versions = result.stdout.strip().split("\n")
     return versions
-
-
 def get_src_path(Project, Version):
     Version = int(Version)
     path = SRC_PATH / f"{Project}-SrcPath.csv"
@@ -28,8 +24,6 @@ def get_src_path(Project, Version):
     df = pd.read_csv(path)
     SrcPath = df.loc[(df['Project'] == Project) & (df['Version'] == Version), 'SrcPath'].values[0]
     return SrcPath
-
-
 def processLogFile(file_input_path, file_output_path, prefix_path,project,version):
     with open(file_input_path, "r") as file:
         mutants_log = file.readlines()
@@ -66,8 +60,6 @@ def processLogFile(file_input_path, file_output_path, prefix_path,project,versio
 
     with open(file_output_path, "w") as file:
         json.dump(mutants_data, file)
-
-
 def processJsonFile(Json_File, project, version):
     with open(Json_File, "r") as file:
         mutants_data = json.load(file)
@@ -85,9 +77,6 @@ def processJsonFile(Json_File, project, version):
             print(f"File not found error: {e}")
         except Exception as e:
             print(f"An error occurred: {e}")
-
-
-
 def init():
     projects = ["Collections", "Compress", "Jsoup", "JacksonDatabind", "JxPath"]
     for project in projects:
@@ -100,7 +89,5 @@ def init():
             src_path = get_src_path(project, version)
             processLogFile(Log_File, Json_File, src_path, project, version)
             processJsonFile(Json_File, project, version)
-
-
 if __name__ == '__main__':
     init()
