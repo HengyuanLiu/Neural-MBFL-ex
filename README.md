@@ -84,6 +84,7 @@ Scripts for generating mutants using neural mutation and traditional mutation te
 
 ### Test Execution and Mutation Analysis:
 ```
+Neural-MBFL-ex
 └── MutationAnalysis
     └── 0MutationAnalyst
         ├── changeFileToJson.py
@@ -97,6 +98,7 @@ Execution of mutants to gather execution information and scripts for mutation an
 
 ### Fault Localization and Ranking Techniques: 
 ```
+Neural-MBFL-ex
 └── FaultLocalization
     └── MBFL_Scripts
         ├── FLWorkflow.sh
@@ -123,18 +125,19 @@ Analysis of mutant execution information for fault localization and scripts for 
 
 ### Result Analysis:
 ```
-├── Experiments
-│   ├── DataSetDescripion.ipynb
-│   ├── Experiments.ipynb
-│   ├── FLResultAnalyst.py
-│   ├── StatisticAnalysis.py
-│   └── Utils
-│       ├── __init__.py
-│       ├── ColorPalette.py
-│       ├── DatasetConfig.py
-│       ├── FileStatistic.py
-│       ├── PandasHelper.py
-│       └── STEnvConfig.py
+Neural-MBFL-ex
+└── Experiments
+    ├── DataSetDescripion.ipynb
+    ├── Experiments.ipynb
+    ├── FLResultAnalyst.py
+    ├── StatisticAnalysis.py
+    └── Utils
+        ├── __init__.py
+        ├── ColorPalette.py
+        ├── DatasetConfig.py
+        ├── FileStatistic.py
+        ├── PandasHelper.py
+        └── STEnvConfig.py
 ```
 Scripts related to the analysis of Dataset Description, RQs (Research Questions) and Discussion
 - DataSetDescripion.ipynb: Script for the Dataset Description
